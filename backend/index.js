@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cookieParser = require('cookie-parser');
 
 require("dotenv").config();
 
@@ -14,6 +15,7 @@ const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
 // middlewares
+app.use(cookieParser());
 app.use(express.json());
 app.use("/user", userRoutes);
 app.use("/auth", authRoutes);

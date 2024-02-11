@@ -7,6 +7,10 @@ const router = express.Router();
 
 router.get("/tasks-list", isAuth, userControllers.fetchTasks);
 
-router.post("/add-task", isAuth, userControllers.addTask);
+router.put("/add-task", isAuth, userControllers.addTask);
+
+router.patch("/edit-task", isAuth, userControllers.editTask);
+
+router.delete("/delete-task/:taskId", isAuth, userControllers.deleteTask);
 
 module.exports = router;
