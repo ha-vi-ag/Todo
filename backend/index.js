@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const cookieParser = require('cookie-parser');
+const cookieParser = require("cookie-parser");
 
 require("dotenv").config();
 
@@ -27,7 +27,7 @@ const connect = async () => {
     console.log("Mongodb connected");
     app.listen(PORT, () => console.log(`Server started`));
   } catch (err) {
-    console.log(err, "some error occured");
+    console.log(err, "Problem in database connectivity");
   }
 };
 
